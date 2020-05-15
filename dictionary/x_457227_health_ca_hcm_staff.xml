@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_user" label="Hcm Staff" max_length="40" name="x_457227_health_ca_hcm_staff" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Employee ID" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Category" max_length="40" name="u_category" type="string">
+            <choice>
+                <element inactive_on_update="false" label="General" sequence="0" value="general"/>
+                <element inactive_on_update="false" label="ENT" sequence="1" value="ent"/>
+                <element inactive_on_update="false" label="Orthodontics" sequence="2" value="orthodontics"/>
+            </choice>
+        </element>
+        <element label="Business No." max_length="40" name="u_integer_10" type="integer"/>
+        <element label="Zipcode" max_length="40" name="u_integer_7" type="integer"/>
+        <element label="Mobile No." max_length="40" name="u_integer_9" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Speciality" max_length="40" name="u_speciality" type="string">
+            <choice>
+                <element inactive_on_update="false" label="MD Medicine" sequence="0" value="md medicine"/>
+                <element inactive_on_update="false" label="Neurosurgery" sequence="0" value="neurosurgery"/>
+                <element inactive_on_update="false" label="ENT" sequence="1" value="ent"/>
+                <element inactive_on_update="false" label="Neuro" sequence="2" value="neuro"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Title" max_length="40" name="u_string_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Department" max_length="40" name="u_string_3" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Street" max_length="40" name="u_string_4" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="City" max_length="40" name="u_string_5" type="string"/>
+    </element>
+</database>

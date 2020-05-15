@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>user</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">ccbd0857dbe050509d0264d7489619e4</sp_column>
+        <sp_page display_value="staff_registration">d628e34bdb3200109d0264d748961943</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 07:01:39</sys_created_on>
+        <sys_id>3cdd8c57dbe050509d0264d748961920</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Staff Registration</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_instance_link_3cdd8c57dbe050509d0264d748961920</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 07:09:19</sys_updated_on>
+        <title>Staff Registration</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=3cdd8c57dbe050509d0264d748961920"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sp_instance_link_3cdd8c57dbe050509d0264d748961920</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;user&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;ccbd0857dbe050509d0264d7489619e4&lt;/sp_column&gt;&lt;sp_page display_value="staff_registration"&gt;d628e34bdb3200109d0264d748961943&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-05-08 07:01:39&lt;/sys_created_on&gt;&lt;sys_id&gt;3cdd8c57dbe050509d0264d748961920&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Staff Registration&lt;/sys_name&gt;&lt;sys_package display_value="Health Care Management" source="x_457227_health_ca"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Health Care Management"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_3cdd8c57dbe050509d0264d748961920&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-05-08 07:09:19&lt;/sys_updated_on&gt;&lt;title&gt;Staff Registration&lt;/title&gt;&lt;type&gt;page&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=3cdd8c57dbe050509d0264d748961920"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>317412883</payload_hash>
+        <record_name>Staff Registration</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 07:09:19</sys_created_on>
+        <sys_id>819fc81bdbe050509d0264d7489619b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f31df5420000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 07:09:19</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>0d9fc81b6fe05050c79599b6c4bdfcb2</update_guid>
+        <update_guid_history>0d9fc81b6fe05050c79599b6c4bdfcb2:317412883,740e8c5780e050501f16829f82d8e182:1995630621,b0dd8c574be050502fef5fec5d931a22:-213962953</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Staff Registration">904e10dfdb2450509d0264d74896199b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 08:13:26</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>12f21009baba4cb086f376e36098ff59</sys_id>
+        <sys_metadata>3cdd8c57dbe050509d0264d748961920</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Staff Registration</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sp_instance_link_3cdd8c57dbe050509d0264d748961920</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_3cdd8c57dbe050509d0264d748961920">819fc81bdbe050509d0264d7489619b3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 08:13:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

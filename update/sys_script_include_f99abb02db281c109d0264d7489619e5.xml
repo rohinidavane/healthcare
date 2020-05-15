@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_457227_health_ca.SPEntryPage override</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SPEntryPage override</name>
+        <script><![CDATA[var SPEntryPage_override = Class.create();
+SPEntryPage_override.prototype = {
+    initialize: function() {
+		this.portal="/hcm/"
+    },
+
+	port:function(){
+	//if(gs.hasRole('x_457227_health_ca.hcm_staff_user') == true){
+		if(gs.getUser().isMemberOf('Doctors group')){
+		//gs.info("***Doctor role");
+			gs.log("***Doctor role");
+        this.portal = "/gs/" ;
+		
+     }},
+		
+    type: 'SPEntryPage override'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-05 03:17:42</sys_created_on>
+        <sys_id>f99abb02db281c109d0264d7489619e5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SPEntryPage override</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sys_script_include_f99abb02db281c109d0264d7489619e5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-05 03:36:05</sys_updated_on>
+    </sys_script_include>
+</record_update>

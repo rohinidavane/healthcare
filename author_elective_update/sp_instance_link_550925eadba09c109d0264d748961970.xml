@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>eye</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">de87e56adba09c109d0264d7489619fb</sp_column>
+        <sp_page display_value="covid19">594d1deadb609c109d0264d7489619b2</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-06 05:44:39</sys_created_on>
+        <sys_id>550925eadba09c109d0264d748961970</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Live Updates</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_instance_link_550925eadba09c109d0264d748961970</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-06 06:02:44</sys_updated_on>
+        <title>Live Updates</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=550925eadba09c109d0264d748961970"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sp_instance_link_550925eadba09c109d0264d748961970</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;eye&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;de87e56adba09c109d0264d7489619fb&lt;/sp_column&gt;&lt;sp_page display_value="covid19"&gt;594d1deadb609c109d0264d7489619b2&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-05-06 05:44:39&lt;/sys_created_on&gt;&lt;sys_id&gt;550925eadba09c109d0264d748961970&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Live Updates&lt;/sys_name&gt;&lt;sys_package display_value="Health Care Management" source="x_457227_health_ca"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Health Care Management"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_550925eadba09c109d0264d748961970&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-05-06 06:02:44&lt;/sys_updated_on&gt;&lt;title&gt;Live Updates&lt;/title&gt;&lt;type&gt;page&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=550925eadba09c109d0264d748961970"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1623283246</payload_hash>
+        <record_name>Live Updates</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-06 06:02:44</sys_created_on>
+        <sys_id>522d2522dbe09c109d0264d7489619f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171e89449960000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-06 06:02:44</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>da2d252258e09c10683585f2d9ced7f1</update_guid>
+        <update_guid_history>da2d252258e09c10683585f2d9ced7f1:-1623283246,4d5ce5ae36a09c106d1244afabdc62e1:-1725262904,cd1ca1ae41a09c105be0ce0d6818aceb:-2096923222,f6fa2daa5ea09c107f68d7c19d593bc8:-682593079,1d0925ea3ca09c10e50972f5f3fa6671:1714016586</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Live Updates">314e35a6db249c109d0264d748961975</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-06 07:17:31</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>9ad17ab8c296459b954c2e5b6bb9b149</sys_id>
+        <sys_metadata>550925eadba09c109d0264d748961970</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Live Updates</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sp_instance_link_550925eadba09c109d0264d748961970</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_550925eadba09c109d0264d748961970">522d2522dbe09c109d0264d7489619f2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-06 07:17:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

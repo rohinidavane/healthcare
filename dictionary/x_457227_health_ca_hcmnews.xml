@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Hcmnews" max_length="40" name="x_457227_health_ca_hcmnews" type="collection">
+        <element label="comments" max_length="1000" name="comments" type="translated_text"/>
+    </element>
+</database>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css>.iconlink{
+height:400px;
+}
+
+.text-success{
+font-size: 2.5rem;
+}
+
+</css>
+        <glyph/>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description>Do you feel like you have some symptoms of covid-19? Here is the free advice. Just click here to check</short_description>
+        <size>md</size>
+        <sp_column display_value="2">46833347db6050509d0264d748961968</sp_column>
+        <sp_page display_value="covidpage">0cd7fb4bdb6050509d0264d7489619b0</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 05:24:03</sys_created_on>
+        <sys_id>0777fb4bdb6050509d0264d748961922</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Self Covid Checker</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_instance_link_0777fb4bdb6050509d0264d748961922</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 06:37:35</sys_updated_on>
+        <title>Self Covid Checker</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=0777fb4bdb6050509d0264d748961922"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sp_instance_link_0777fb4bdb6050509d0264d748961922</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css&gt;.iconlink{
+height:400px;
+}
+
+.text-success{
+font-size: 2.5rem;
+}
+
+&lt;/css&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description&gt;Do you feel like you have some symptoms of covid-19? Here is the free advice. Just click here to check&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;46833347db6050509d0264d748961968&lt;/sp_column&gt;&lt;sp_page display_value="covidpage"&gt;0cd7fb4bdb6050509d0264d7489619b0&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-05-08 05:24:03&lt;/sys_created_on&gt;&lt;sys_id&gt;0777fb4bdb6050509d0264d748961922&lt;/sys_id&gt;&lt;sys_mod_count&gt;13&lt;/sys_mod_count&gt;&lt;sys_name&gt;Self Covid Checker&lt;/sys_name&gt;&lt;sys_package display_value="Health Care Management" source="x_457227_health_ca"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Health Care Management"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_0777fb4bdb6050509d0264d748961922&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-05-08 06:37:35&lt;/sys_updated_on&gt;&lt;title&gt;Self Covid Checker&lt;/title&gt;&lt;type&gt;page&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=0777fb4bdb6050509d0264d748961922"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-258672234</payload_hash>
+        <record_name>Self Covid Checker</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 06:37:35</sys_created_on>
+        <sys_id>58588c5fdba050509d0264d7489619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f300eb440000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 06:37:35</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>d0588c5f3ca05050838c54966357dce3</update_guid>
+        <update_guid_history>d0588c5f3ca05050838c54966357dce3:-258672234,0a48409f12a050509d75446e1ce77895:812379127,5fc6401fd6a050501ebed241349ae66c:-940619165,2116045bb2a05050a720d1218e649313:-2067099381,6485c09b12a050500e1edd354d4ac4c0:1367313458,9055045b95a0505096d9099d9da7990f:342123504,6535c45be8a05050fa6569caf417e5a7:-1630289373,1305041b0fa050506f9404d0d9df91b6:948560421,21d4c45b9fa05050e8dccd4e074e2688:342123504,0364045b37a05050859e54206b77170a:-942209053,b07fb3c3a1a0505043d1d8023cd9eed4:-1375370486,dd28f78bdd605050f8a32818902f95d3:493582629,9f97bf0be3605050de0c39dfcf0b2411:-1451551106,4b77fb4b516050508f53b104f4433c23:560312429</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Self Covid Checker">f64b0c13dbe050509d0264d7489619da</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 06:50:35</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>a0b1ca12b1974a8cbc68493bab09af29</sys_id>
+        <sys_metadata>0777fb4bdb6050509d0264d748961922</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Self Covid Checker</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sp_instance_link_0777fb4bdb6050509d0264d748961922</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_0777fb4bdb6050509d0264d748961922">58588c5fdba050509d0264d7489619e3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 06:50:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

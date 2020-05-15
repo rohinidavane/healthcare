@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>hcm homepage - Container 7</name>
+        <order>7</order>
+        <sp_page display_value="hcm_homepage">5530f012db3640109d0264d7489619ce</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 07:10:35</sys_created_on>
+        <sys_id>f3df885bdbe050509d0264d7489619b1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>hcm homepage - Container 7</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_container_f3df885bdbe050509d0264d7489619b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 08:14:10</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sp_container_f3df885bdbe050509d0264d7489619b1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>hcm homepage - Container 7</name><order>7</order><sp_page display_value="hcm_homepage">5530f012db3640109d0264d7489619ce</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-08 07:10:35</sys_created_on><sys_id>f3df885bdbe050509d0264d7489619b1</sys_id><sys_mod_count>1</sys_mod_count><sys_name>hcm homepage - Container 7</sys_name><sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package><sys_policy/><sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope><sys_update_name>sp_container_f3df885bdbe050509d0264d7489619b1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-08 08:14:10</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1086572061</payload_hash>
+        <record_name>hcm homepage - Container 7</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 08:14:10</sys_created_on>
+        <sys_id>c76edcdfdb2450509d0264d7489619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f35955d30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 08:14:10</sys_updated_on>
+        <type>Container</type>
+        <update_guid>436edcdfcb245050b2194ece273862f7</update_guid>
+        <update_guid_history>436edcdfcb245050b2194ece273862f7:-1086572061,b7df885b12e050508675242608e8dfb2:1553632866</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="hcm homepage - Container 7">823f5053db6450509d0264d748961967</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 08:17:39</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>1fbb1c9a589f451cbdda8ae48114d184</sys_id>
+        <sys_metadata>f3df885bdbe050509d0264d7489619b1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>hcm homepage - Container 7</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sp_container_f3df885bdbe050509d0264d7489619b1</sys_update_name>
+        <sys_update_version display_value="sp_container_f3df885bdbe050509d0264d7489619b1">c76edcdfdb2450509d0264d7489619f7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 08:17:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

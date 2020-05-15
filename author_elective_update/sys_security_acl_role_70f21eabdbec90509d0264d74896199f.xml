@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 11:22:13</sys_created_on>
+        <sys_id>70f21eabdbec90509d0264d74896199f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_457227_health_ca_hcm_patient.x_457227_health_ca.doctor</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_security_acl display_value="x_457227_health_ca_hcm_patient">254e7382db7240109d0264d748961980</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_70f21eabdbec90509d0264d74896199f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 11:22:13</sys_updated_on>
+        <sys_user_role display_value="x_457227_health_ca.doctor" name="x_457227_health_ca.doctor">976ac623dbec90509d0264d7489619ca</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sys_security_acl_role_70f21eabdbec90509d0264d74896199f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-09 11:22:13</sys_created_on><sys_id>70f21eabdbec90509d0264d74896199f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_457227_health_ca_hcm_patient.x_457227_health_ca.doctor</sys_name><sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package><sys_policy/><sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope><sys_security_acl display_value="x_457227_health_ca_hcm_patient">254e7382db7240109d0264d748961980</sys_security_acl><sys_update_name>sys_security_acl_role_70f21eabdbec90509d0264d74896199f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-09 11:22:13</sys_updated_on><sys_user_role display_value="x_457227_health_ca.doctor" name="x_457227_health_ca.doctor">976ac623dbec90509d0264d7489619ca</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1418561410</payload_hash>
+        <record_name>x_457227_health_ca_hcm_patient.x_457227_health_ca.doctor</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 11:22:13</sys_created_on>
+        <sys_id>1f0312ebdbec90509d0264d74896198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f92bdbd20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 11:22:13</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>570312eb25ec9050455c2b1267f34f8e</update_guid>
+        <update_guid_history>570312eb25ec9050455c2b1267f34f8e:-1418561410</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_457227_health_ca_hcm_patient.x_457227_health_ca.doctor">f49652efdbec90509d0264d748961921</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 11:37:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>8982f71ada4a4c3ea85508f2797a46e9</sys_id>
+        <sys_metadata>70f21eabdbec90509d0264d74896199f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_457227_health_ca_hcm_patient.x_457227_health_ca.doctor</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent display_value="x_457227_health_ca_hcm_patient">254e7382db7240109d0264d748961980</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_70f21eabdbec90509d0264d74896199f</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_70f21eabdbec90509d0264d74896199f">1f0312ebdbec90509d0264d74896198e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 11:37:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

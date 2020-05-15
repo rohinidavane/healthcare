@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>.panel{&#13;
+  background-color: #f7f7f7;&#13;
+  border: none;&#13;
+  border-radius: 3px;&#13;
+  box-shadow: none;&#13;
+}&#13;
+&#13;
+.panel-default &gt; .panel-heading {&#13;
+  color: #3a3f51;&#13;
+  border-color: $help-now-primary;&#13;
+}&#13;
+&#13;
+body .padding-top{&#13;
+  padding-top:0;&#13;
+}&#13;
+&#13;
+a.top_icon {&#13;
+  margin-top: 30px;&#13;
+  margin-bottom: 30px;&#13;
+  background: $brand-primary;&#13;
+  color: white;&#13;
+  border-radius: 3px;&#13;
+}&#13;
+&#13;
+a.top_icon .fa{&#13;
+  color:white;&#13;
+}&#13;
+a.top_icon .fa:hover{&#13;
+  color:white;&#13;
+}&#13;
+&#13;
+a.top_icon{&#13;
+  margin-top:10px;&#13;
+  margin-bottom:10px; &#13;
+}&#13;
+&#13;
+a.color_box {&#13;
+    margin-bottom: 0px;&#13;
+    margin-top: 10px;&#13;
+}&#13;
+&#13;
+&#13;
+.breadcrumbs-container {&#13;
+  margin-bottom: 20px;&#13;
+}</css>
+        <name>HCM Styles</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 07:33:34</sys_created_on>
+        <sys_id>bb055cd3db2450509d0264d74896193e</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>HCM Styles</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_css_bb055cd3db2450509d0264d74896193e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 14:52:28</sys_updated_on>
+    </sp_css>
+</record_update>

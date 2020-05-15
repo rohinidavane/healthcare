@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>patient_registration</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Patient Registration</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-08 04:08:33</sys_created_on>
+        <sys_id>1b17089adb7240109d0264d7489619c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Patient Registration</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_widget_1b17089adb7240109d0264d7489619c9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-08 04:08:33</sys_updated_on>
+        <template><![CDATA[<div><!-- your widget template --></div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sp_widget_1b17089adb7240109d0264d7489619c9</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function() {  /* widget controller */  var c = this;}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;patient_registration&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;Patient Registration&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-02-08 04:08:33&lt;/sys_created_on&gt;&lt;sys_id&gt;1b17089adb7240109d0264d7489619c9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Patient Registration&lt;/sys_name&gt;&lt;sys_package display_value="Health Care Management" source="x_457227_health_ca"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Health Care Management"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_1b17089adb7240109d0264d7489619c9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-02-08 04:08:33&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div&gt;&lt;!-- your widget template --&gt;&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1642826032</payload_hash>
+        <record_name>Patient Registration</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-08 04:08:33</sys_created_on>
+        <sys_id>d717c89adb7240109d0264d748961978</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17022fc1e570000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-08 04:08:33</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>1317c89ac3724010bbf06f71070d7878</update_guid>
+        <update_guid_history>1317c89ac3724010bbf06f71070d7878:1642826032</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Patient Registration">f5cac8dadb7240109d0264d74896193e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-08 04:24:33</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>0edac465c9d3440181235bc5d32f1aa1</sys_id>
+        <sys_metadata>1b17089adb7240109d0264d7489619c9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Patient Registration</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sp_widget_1b17089adb7240109d0264d7489619c9</sys_update_name>
+        <sys_update_version display_value="sp_widget_1b17089adb7240109d0264d7489619c9">d717c89adb7240109d0264d748961978</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-08 04:24:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

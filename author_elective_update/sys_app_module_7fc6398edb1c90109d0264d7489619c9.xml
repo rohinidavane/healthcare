@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Patient">0ddcbb02db7240109d0264d748961945</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>NEW</link_type>
+        <map_page/>
+        <mobile_title>pat</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_457227_health_ca_hcm_patient</name>
+        <order>600</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-22 07:14:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7fc6398edb1c90109d0264d7489619c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pat</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sys_app_module_7fc6398edb1c90109d0264d7489619c9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-22 07:14:07</sys_updated_on>
+        <timeline_page/>
+        <title>pat</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sys_app_module_7fc6398edb1c90109d0264d7489619c9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Patient">0ddcbb02db7240109d0264d748961945</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>NEW</link_type><map_page/><mobile_title>pat</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_457227_health_ca_hcm_patient</name><order>600</order><override_menu_roles>false</override_menu_roles><query/><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-04-22 07:14:07</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7fc6398edb1c90109d0264d7489619c9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>pat</sys_name><sys_overrides/><sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package><sys_policy/><sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope><sys_update_name>sys_app_module_7fc6398edb1c90109d0264d7489619c9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-04-22 07:14:07</sys_updated_on><timeline_page/><title>pat</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>805456059</payload_hash>
+        <record_name>pat</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-22 07:14:07</sys_created_on>
+        <sys_id>ab377d4edb1c90109d0264d7489619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171a0bc9d040000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-22 07:14:07</sys_updated_on>
+        <type>Module</type>
+        <update_guid>e3377d4e7a1c90102c5f2fb1e5631cd4</update_guid>
+        <update_guid_history>e3377d4e7a1c90102c5f2fb1e5631cd4:805456059</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="pat">43f775cedb1c90109d0264d748961972</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-22 07:17:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>19e31141cd4f4d709e19753bb3667100</sys_id>
+        <sys_metadata>7fc6398edb1c90109d0264d7489619c9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pat</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sys_app_module_7fc6398edb1c90109d0264d7489619c9</sys_update_name>
+        <sys_update_version display_value="sys_app_module_7fc6398edb1c90109d0264d7489619c9">ab377d4edb1c90109d0264d7489619d4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-22 07:17:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

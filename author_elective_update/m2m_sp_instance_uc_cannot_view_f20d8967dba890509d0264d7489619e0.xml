@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_instance_uc_cannot_view">
+    <m2m_sp_instance_uc_cannot_view action="DELETE">
+        <sp_instance display_value="Book Appointment">033d381bdbe450509d0264d74896191f</sp_instance>
+        <sys_class_name>m2m_sp_instance_uc_cannot_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 06:16:21</sys_created_on>
+        <sys_id>f20d8967dba890509d0264d7489619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Book Appointment.Roles : admin</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>m2m_sp_instance_uc_cannot_view_f20d8967dba890509d0264d7489619e0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 06:16:21</sys_updated_on>
+        <user_criteria display_value="Roles : admin">98134102dbe8d8109d0264d7489619a1</user_criteria>
+    </m2m_sp_instance_uc_cannot_view>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>m2m_sp_instance_uc_cannot_view_f20d8967dba890509d0264d7489619e0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_instance_uc_cannot_view"><m2m_sp_instance_uc_cannot_view action="INSERT_OR_UPDATE"><sp_instance display_value="Book Appointment">033d381bdbe450509d0264d74896191f</sp_instance><sys_class_name>m2m_sp_instance_uc_cannot_view</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-09 06:16:21</sys_created_on><sys_id>f20d8967dba890509d0264d7489619e0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Book Appointment.Roles : admin</sys_name><sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package><sys_policy/><sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope><sys_update_name>m2m_sp_instance_uc_cannot_view_f20d8967dba890509d0264d7489619e0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-09 06:16:21</sys_updated_on><user_criteria display_value="Roles : admin">98134102dbe8d8109d0264d7489619a1</user_criteria></m2m_sp_instance_uc_cannot_view></record_update>]]></payload>
+        <payload_hash>-481548785</payload_hash>
+        <record_name>Book Appointment.Roles : admin</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 06:16:21</sys_created_on>
+        <sys_id>fa0d8967dba890509d0264d7489619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f813d3e10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 06:16:21</sys_updated_on>
+        <type>Who Cannot View Instance</type>
+        <update_guid>360d8967c8a89050be6808b872eec8e1</update_guid>
+        <update_guid_history>360d8967c8a89050be6808b872eec8e1:-481548785</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Book Appointment.Roles : admin">fd6dc9a7dba890509d0264d74896198f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 06:17:55</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_instance_uc_cannot_view">m2m_sp_instance_uc_cannot_view</sys_db_object>
+        <sys_id>378b8956bc4145099e00fe51e0b9e499</sys_id>
+        <sys_metadata>f20d8967dba890509d0264d7489619e0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Book Appointment.Roles : admin</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>m2m_sp_instance_uc_cannot_view_f20d8967dba890509d0264d7489619e0</sys_update_name>
+        <sys_update_version display_value="m2m_sp_instance_uc_cannot_view_f20d8967dba890509d0264d7489619e0">fa0d8967dba890509d0264d7489619e1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 06:17:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

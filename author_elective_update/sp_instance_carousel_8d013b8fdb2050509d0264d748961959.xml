@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel">
+    <sp_instance_carousel action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <interval>5000</interval>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">d0d03f43db6050509d0264d74896196c</sp_column>
+        <sp_widget display_value="my_carousel">84ed8070dbec54109d0264d74896190a</sp_widget>
+        <sys_class_name>sp_instance_carousel</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 04:55:47</sys_created_on>
+        <sys_id>8d013b8fdb2050509d0264d748961959</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_instance_carousel_8d013b8fdb2050509d0264d748961959</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 04:55:47</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_carousel>
+    <sys_translated_text action="DELETE" query="documentkey=8d013b8fdb2050509d0264d748961959"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sp_instance_carousel_8d013b8fdb2050509d0264d748961959</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel"><sp_instance_carousel action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><interval>5000</interval><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="2">d0d03f43db6050509d0264d74896196c</sp_column><sp_widget display_value="my_carousel">84ed8070dbec54109d0264d74896190a</sp_widget><sys_class_name>sp_instance_carousel</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-08 04:55:47</sys_created_on><sys_id>8d013b8fdb2050509d0264d748961959</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package><sys_policy/><sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope><sys_update_name>sp_instance_carousel_8d013b8fdb2050509d0264d748961959</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-08 04:55:47</sys_updated_on><title/><url/><widget_parameters/></sp_instance_carousel><sys_translated_text action="delete_multiple" query="documentkey=8d013b8fdb2050509d0264d748961959"/></record_update>]]></payload>
+        <payload_hash>-1749228503</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 04:55:47</sys_created_on>
+        <sys_id>8501ff43db6050509d0264d7489619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f2a3b6db0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 04:55:47</sys_updated_on>
+        <type>Instance of Carousel</type>
+        <update_guid>cd01ff433f605050a91c6b53a771e5d6</update_guid>
+        <update_guid_history>cd01ff433f605050a91c6b53a771e5d6:-1749228503</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">02337b07db6050509d0264d7489619d0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 05:05:24</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_carousel">sp_instance_carousel</sys_db_object>
+        <sys_id>91065ea1e376455dbadb68ad402b6299</sys_id>
+        <sys_metadata>8d013b8fdb2050509d0264d748961959</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sp_instance_carousel_8d013b8fdb2050509d0264d748961959</sys_update_name>
+        <sys_update_version display_value="sp_instance_carousel_8d013b8fdb2050509d0264d748961959">8501ff43db6050509d0264d7489619d7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 05:05:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

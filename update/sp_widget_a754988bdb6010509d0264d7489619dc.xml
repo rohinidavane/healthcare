@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spUtil,$rootScope) {
+  /* widget controller */
+    
+  var c = this;
+    c.item = 'General';
+    c.categoryShow = false;
+    c.city = "Select City";
+    c.category= "Select Category";
+    c.doctorShow = false;
+    
+    c.selectedCity = function(city){
+        c.categoryShow = true;
+        c.data.selectedCity = city;
+        if(c.data.selectedCategory && c.data.selectedCity){
+             c.doctorShow = true;
+             }
+        
+        c.server.update().then(function(){
+        //c.data.selectedCity = undefined;
+            //c.itemList2 = false;
+        }) 
+    }
+    
+    c.selectedCategory = function(category){
+        c.data.selectedCategory = category;
+        c.server.update().then(function(){
+        //c.data.selectedCity = undefined;
+        //c.data.selectedCategory = undefined;    
+            //c.itemList2 = false;
+            if(c.data.selectedCategory && c.data.selectedCity){
+             c.doctorShow = true;
+             }
+        }) 
+    }
+	
+	c.selectedDoctor = function(doctor){
+		var obj= {
+    name: doctor};
+		
+		$rootScope.$broadcast('customEvent', obj);
+   
+			}
+	
+	$rootScope.$on('customEvent', function(event,obj) {
+ c.text = "You clicked "+obj.name;
+  });
+}
+
+
+
+        //console.log('client '+x);
+        //spUtil.addInfoMessage(x);
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>select{
+  width:200px;
+}
+.first{
+  width:150px;
+}
+tr,td{
+ padding: 10px;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>dynamicdoctors</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>dynamicDoctors</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+
+    /* e.g., data.table = $sp.getValue('table'); */
+  data.cities = ["Pune","Mumbai","Chennai","Banglore"]
+    data.categories = ["General","ENT","Orthodontics"]
+    
+    if(input && input.selectedCategory && input.selectedCity ){
+        data.doctors = []
+        var docs = fetchDoctors(input.selectedCity,input.selectedCategory);
+        for (var i=0;i<docs.length;i++){
+            data.doctors.push(docs[i])
+          }
+        }
+        
+    function fetchDoctors(city,category){
+        //var doctersList = ['MB','ABC',"Bhbh"];
+		     var doctersList = [];
+        // glide record
+			    var gr = new GlideRecord('x_457227_health_ca_hcm_staff');
+			    gr.addQuery('u_string_5',city);
+			    gr.addQuery('u_category',category);
+			    gr.query();
+			
+			while(gr.next()){
+						doctersList.push(gr.first_name.getDisplayValue());
+				
+						}
+        // docters.push()
+        console.log(city+' '+category);
+			 console.log(doctersList);
+			
+        
+        return doctersList
+    } 
+        
+    
+})();
+
+
+//gs.info(JSON.stringify(doctors);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-07 12:51:45</sys_created_on>
+        <sys_id>a754988bdb6010509d0264d7489619dc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>dynamicDoctors</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_widget_a754988bdb6010509d0264d7489619dc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-07 13:11:34</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+   
+  <table style="width:400px">
+    <tr>
+      <td class="first">Select City </td> <td><select  ng-model="c.city" ng-options=" x for x in data.cities" ng-change= "c.selectedCity(c.city)">
+      </select></td>
+     </tr>
+    <tr ng-show="c.categoryShow">
+    <td class="first">Select Category </td><td> <select ng-model="c.category" ng-options=" x for x in data.categories" ng-change="c.selectedCategory(c.category)">
+      </select></td>
+    </tr>
+    <tr ng-show="c.doctorShow">
+    <td class="first">Select Doctors </td><td> <select ng-model="c.doctor" ng-options=" x for x in data.doctors" ng-click="c.selectedDoctor(c.doctor)" >
+      </select></td>
+    </tr>
+    </table>
+   {{c.text}}
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Relative Info" section_id="87250c1adb7240109d0264d74896193b" sys_domain="global" table="x_457227_health_ca_hcm_patient" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_string_7</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-02-08 04:00:07</sys_created_on>
+            <sys_id>3f254c1adb7240109d0264d74896190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Relative Info" display_value="Relative Info" name="x_457227_health_ca_hcm_patient" sys_domain="global" view="Default view">87250c1adb7240109d0264d74896193b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-02-08 04:00:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_integer_10</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-02-08 04:00:07</sys_created_on>
+            <sys_id>b3254c1adb7240109d0264d74896190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Relative Info" display_value="Relative Info" name="x_457227_health_ca_hcm_patient" sys_domain="global" view="Default view">87250c1adb7240109d0264d74896193b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-02-08 04:00:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-02-08 04:00:07</sys_created_on>
+            <sys_id>3b254c1adb7240109d0264d74896190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Relative Info" display_value="Relative Info" name="x_457227_health_ca_hcm_patient" sys_domain="global" view="Default view">87250c1adb7240109d0264d74896193b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-02-08 04:00:07</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_string_8</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-02-08 04:00:07</sys_created_on>
+            <sys_id>bf254c1adb7240109d0264d74896190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Relative Info" display_value="Relative Info" name="x_457227_health_ca_hcm_patient" sys_domain="global" view="Default view">87250c1adb7240109d0264d74896193b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-02-08 04:00:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Relative Info</caption>
+            <header>false</header>
+            <name>x_457227_health_ca_hcm_patient</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-02-08 04:00:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>87250c1adb7240109d0264d74896193b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Relative Info</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+            <sys_update_name>sys_ui_section_87250c1adb7240109d0264d74896193b</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-02-08 04:00:04</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

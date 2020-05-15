@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="HcmAppt" max_length="40" name="x_457227_health_ca_hcmappt" sizeclass="40" type="collection">
+        <element label="Date" max_length="40" name="u_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Select Speciality" max_length="40" name="u_speciality" type="string">
+            <choice>
+                <element inactive_on_update="false" label="MD Medicine" sequence="0" value="md medicine"/>
+                <element inactive_on_update="false" label="ENT" sequence="1" value="ent"/>
+                <element inactive_on_update="false" label="Neurosurgery" sequence="2" value="neurosurgery"/>
+            </choice>
+        </element>
+    </element>
+</database>

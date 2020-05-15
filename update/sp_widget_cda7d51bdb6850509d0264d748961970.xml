@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($rootScope) {
+	/* widget controller */
+	var c = this;
+
+	$rootScope.$on('customEvent', function(event,obj) {
+		c.text = "You clicked "+obj.name;
+
+		c.data.name = obj.name;
+		console.log('client script '+ obj.name)
+		//c.doctor = c.data.obj;
+		c.server.get({
+
+			action: 'getDoctor',
+			name: obj.name
+
+		}).then(function(response) {
+
+
+			c.doctor= response.data.doctersList;
+
+			console.log("in client "+response.data.doctersList);
+		});
+
+		//console.log("Object: "+ c.data.obj.firstname);
+
+	});
+
+
+}
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>DynamicDoctor3</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	data.doctersList = [];
+	//data.obj = getDoctor();
+  data.name="Naren"
+
+	if(input && input.action == "getDoctor"){
+
+
+
+		var obj = {};
+		gs.info("data.name: "+ input.name);
+		var gr = new GlideRecord('x_457227_health_ca_hcm_staff');
+		gr.addQuery('first_name',input.name);
+		gr.query();
+
+		while(gr.next()){
+			obj.firstname = gr.first_name
+			obj.lastname = gr.last_name;
+			
+			data.doctersList.push(obj)
+			//	$sp.getRecordElements(obj, gr, 'u_name,sys_id');
+		}
+		gs.info("Name: "+ obj.firstname);
+		gs.info("doctor_name: "+ gr.first_name);
+
+
+		console.log("in server"+ data.doctersList[0]);
+
+		
+	}
+
+
+})();
+
+
+
+
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 12:24:10</sys_created_on>
+        <sys_id>cda7d51bdb6850509d0264d748961970</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>DynamicDoctor3</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_widget_cda7d51bdb6850509d0264d748961970</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 12:27:27</sys_updated_on>
+        <template><![CDATA[<div>
+  <!-- your widget template -->
+  <h3>
+    {{data.name}}
+  </h3>
+
+
+  Doctor =  {{c.doctor}} 
+ 
+  
+</div>]]></template>
+    </sp_widget>
+</record_update>

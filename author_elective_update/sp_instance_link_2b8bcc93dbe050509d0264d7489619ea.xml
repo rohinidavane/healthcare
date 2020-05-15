@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">46833347db6050509d0264d748961968</sp_column>
+        <sp_page display_value="covidpage">0cd7fb4bdb6050509d0264d7489619b0</sp_page>
+        <sp_widget display_value="my icon link">bfc9445fdba050509d0264d74896195f</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 06:51:44</sys_created_on>
+        <sys_id>2b8bcc93dbe050509d0264d7489619ea</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Self Covid Checker</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_instance_link_2b8bcc93dbe050509d0264d7489619ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 06:52:33</sys_updated_on>
+        <title>Self Covid Checker</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=2b8bcc93dbe050509d0264d7489619ea"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sp_instance_link_2b8bcc93dbe050509d0264d7489619ea</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;46833347db6050509d0264d748961968&lt;/sp_column&gt;&lt;sp_page display_value="covidpage"&gt;0cd7fb4bdb6050509d0264d7489619b0&lt;/sp_page&gt;&lt;sp_widget display_value="my icon link"&gt;bfc9445fdba050509d0264d74896195f&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-05-08 06:51:44&lt;/sys_created_on&gt;&lt;sys_id&gt;2b8bcc93dbe050509d0264d7489619ea&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Self Covid Checker&lt;/sys_name&gt;&lt;sys_package display_value="Health Care Management" source="x_457227_health_ca"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Health Care Management"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_2b8bcc93dbe050509d0264d7489619ea&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-05-08 06:52:33&lt;/sys_updated_on&gt;&lt;title&gt;Self Covid Checker&lt;/title&gt;&lt;type&gt;page&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=2b8bcc93dbe050509d0264d7489619ea"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-419859818</payload_hash>
+        <record_name>Self Covid Checker</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 06:52:33</sys_created_on>
+        <sys_id>5fbbc0d3dbe050509d0264d74896197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f30e9c5d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 06:52:33</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>d7bbc0d337e05050ed2f49bae4edb87f</update_guid>
+        <update_guid_history>d7bbc0d337e05050ed2f49bae4edb87f:-419859818,638bcc93cee05050443019bd6d1fc0ec:56080716</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Self Covid Checker">4c589c57db2450509d0264d7489619c3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 07:47:29</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>8af047d943b647d19b8abcaea2505501</sys_id>
+        <sys_metadata>2b8bcc93dbe050509d0264d7489619ea</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Self Covid Checker</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sp_instance_link_2b8bcc93dbe050509d0264d7489619ea</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_2b8bcc93dbe050509d0264d7489619ea">5fbbc0d3dbe050509d0264d74896197f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 07:47:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

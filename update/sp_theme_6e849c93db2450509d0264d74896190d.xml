@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>$font-family-base:'Montserrat', sans-serif;&#13;
+//$help-now-primary: #20b9ac;&#13;
+$help-now-primary: #afb8ba;&#13;
+$help-now-secondary: #1d9085;&#13;
+&#13;
+&#13;
+&#13;
+$brand-primary: $help-now-primary;&#13;
+$brand-secondary: #1f8476;&#13;
+&#13;
+&#13;
+$panel-bg: #fdfdfd;&#13;
+//$panel-default-heading-bg: $help-now-primary;&#13;
+//$panel-default-text: white;&#13;
+&#13;
+&#13;
+$navbar-inverse-bg: $help-now-primary;&#13;
+$navbar-inverse-link-color: white;&#13;
+$sp-navbar-divider-color: $help-now-secondary;&#13;
+&#13;
+//$btn-default-bg: $help-now-primary;</css_variables>
+        <footer display_value="HCM footer">0bb6dc57db2450509d0264d748961996</footer>
+        <footer_fixed>true</footer_fixed>
+        <header display_value="Stock Header">bf5ec2f2cb10120000f8d856634c9c0c</header>
+        <name>HCM theme</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 07:32:29</sys_created_on>
+        <sys_id>6e849c93db2450509d0264d74896190d</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>HCM theme</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_theme_6e849c93db2450509d0264d74896190d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 11:55:51</sys_updated_on>
+    </sp_theme>
+</record_update>

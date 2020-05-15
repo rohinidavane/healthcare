@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>catalog_health_care_catalog</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-27 13:34:32</sys_created_on>
+        <sys_id>e04efc3fdb1c50109d0264d74896196e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Health care catalog View</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sys_ui_view_e04efc3fdb1c50109d0264d74896196e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-27 13:34:32</sys_updated_on>
+        <title>Health care catalog View</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_instance_uc_can_view">
+    <m2m_sp_instance_uc_can_view action="DELETE">
+        <sp_instance display_value="EHR">be67ecaadbd814109d0264d748961972</sp_instance>
+        <sys_class_name>m2m_sp_instance_uc_can_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 08:03:56</sys_created_on>
+        <sys_id>effb581fdb2450509d0264d748961929</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EHR.Roles : x_457227_health_ca.hcm_staff_user</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>m2m_sp_instance_uc_can_view_effb581fdb2450509d0264d748961929</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 08:03:56</sys_updated_on>
+        <user_criteria display_value="Roles : x_457227_health_ca.hcm_staff_user">77030102dbe8d8109d0264d7489619ec</user_criteria>
+    </m2m_sp_instance_uc_can_view>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>m2m_sp_instance_uc_can_view_effb581fdb2450509d0264d748961929</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_instance_uc_can_view"><m2m_sp_instance_uc_can_view action="INSERT_OR_UPDATE"><sp_instance display_value="EHR">be67ecaadbd814109d0264d748961972</sp_instance><sys_class_name>m2m_sp_instance_uc_can_view</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-08 08:03:56</sys_created_on><sys_id>effb581fdb2450509d0264d748961929</sys_id><sys_mod_count>0</sys_mod_count><sys_name>EHR.Roles : x_457227_health_ca.hcm_staff_user</sys_name><sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package><sys_policy/><sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope><sys_update_name>m2m_sp_instance_uc_can_view_effb581fdb2450509d0264d748961929</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-08 08:03:56</sys_updated_on><user_criteria display_value="Roles : x_457227_health_ca.hcm_staff_user">77030102dbe8d8109d0264d7489619ec</user_criteria></m2m_sp_instance_uc_can_view></record_update>]]></payload>
+        <payload_hash>-798093664</payload_hash>
+        <record_name>EHR.Roles : x_457227_health_ca.hcm_staff_user</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 08:03:56</sys_created_on>
+        <sys_id>4d1cd8dbdb2450509d0264d74896195a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f34ff6690000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 08:03:56</sys_updated_on>
+        <type>Who Can View Instance</type>
+        <update_guid>851cd8db3424505095f7eaa21425fc5a</update_guid>
+        <update_guid_history>851cd8db3424505095f7eaa21425fc5a:-798093664</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="EHR.Roles : x_457227_health_ca.hcm_staff_user">eaf54d93db2850509d0264d74896195b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 11:06:59</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_instance_uc_can_view">m2m_sp_instance_uc_can_view</sys_db_object>
+        <sys_id>089aec80c1b347f08ddc73eff9a15564</sys_id>
+        <sys_metadata>effb581fdb2450509d0264d748961929</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EHR.Roles : x_457227_health_ca.hcm_staff_user</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>m2m_sp_instance_uc_can_view_effb581fdb2450509d0264d748961929</sys_update_name>
+        <sys_update_version display_value="m2m_sp_instance_uc_can_view_effb581fdb2450509d0264d748961929">4d1cd8dbdb2450509d0264d74896195a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 11:06:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

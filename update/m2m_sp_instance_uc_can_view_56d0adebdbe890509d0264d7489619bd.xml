@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_instance_uc_can_view">
+    <m2m_sp_instance_uc_can_view action="INSERT_OR_UPDATE">
+        <sp_instance display_value="Book Appointment">033d381bdbe450509d0264d74896191f</sp_instance>
+        <sys_class_name>m2m_sp_instance_uc_can_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 07:43:06</sys_created_on>
+        <sys_id>56d0adebdbe890509d0264d7489619bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Book Appointment.Hcm Patients</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>m2m_sp_instance_uc_can_view_56d0adebdbe890509d0264d7489619bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 07:43:06</sys_updated_on>
+        <user_criteria display_value="Hcm Patients">4149ce5edba05c109d0264d748961967</user_criteria>
+    </m2m_sp_instance_uc_can_view>
+</record_update>

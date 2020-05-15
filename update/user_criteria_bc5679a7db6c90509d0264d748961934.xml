@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="user_criteria">
+    <user_criteria action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <company/>
+        <department/>
+        <group/>
+        <location/>
+        <match_all>false</match_all>
+        <name>HCM admin</name>
+        <role name="x_457227_health_ca.HCM admin">1da47527db6c90509d0264d7489619d5</role>
+        <script/>
+        <sys_class_name>user_criteria</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 09:17:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bc5679a7db6c90509d0264d748961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HCM admin</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>user_criteria_bc5679a7db6c90509d0264d748961934</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 09:17:15</sys_updated_on>
+        <user/>
+    </user_criteria>
+</record_update>

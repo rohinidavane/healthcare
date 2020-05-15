@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spUtil) {
+  /* widget controller */
+    
+  var c = this;
+    
+   c.whoShow=false;
+	 // c.ageShow =false;
+    
+    c.selectedIll = function(ill){
+       // c.whoShow = true;
+       // c.data.selectedIll = ill;
+       
+            c.whoShow = true;
+		        console.log("hii")
+				   
+        c.server.update().then(function(){
+        //c.data.selectedCity = undefined;
+            //c.itemList2 = false;
+        }) 
+    }
+    
+  /*  c.selectedIll = function(abc){
+        c.data.selectedWho = abc;
+        c.server.update().then(function(){
+        //c.data.selectedCity = undefined;
+        //c.data.selectedCategory = undefined;    
+            //c.itemList2 = false;
+            if(c.data.selectedCategory && c.data.selectedCity){
+            // c.doctorShow = true;
+							  c.data.whoShow = true;
+							 //c.ageShow =true;
+             }
+        }) 
+    }*/
+}
+
+
+
+        //console.log('client '+x);
+        //spUtil.addInfoMessage(x);
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>select{
+  width:200px;
+}
+.first{
+  width:150px;
+}
+tr,td{
+ padding: 10px;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>covidchecker</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>CovidChecker</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+
+    /* e.g., data.table = $sp.getValue('table'); */
+  data.whoisill = ["Yes","No"]
+  data.whoanswers = ["Myself","Someone else"]
+	data.age = ["2-4","5-9","10-20","20-40","40-50","60-80","80+"]
+  data.gender = ["Male","Female","Not disclosed"];
+	data.lifetevent = ["",""];
+	data.symptoms = ["Coughing up blood", "Signs of blood pressure"];
+	data.temperature = ["96","96-97","97-98","98-99","99-100","100+"]
+	//data.duration = [];
+	data.breathing = ["Severe - Gasping for air","Mild - can get enough air but lungs feel tight","No trouble in breathing"];
+   
+	if(input && input.selectedill && input.selectedwho ){
+    cosole.log("HI");
+             
+        
+    } 
+        
+    
+})();
+
+
+//gs.info(JSON.stringify(doctors);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-07 08:39:19</sys_created_on>
+        <sys_id>619ad7fedb2cdc109d0264d7489619a1</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>CovidChecker</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_widget_619ad7fedb2cdc109d0264d7489619a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-07 10:36:37</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+   
+  <table style="width:400px">
+    <tr>
+      <td class="first">Are u ill or caring for someone who is ill? </td> <td><select  ng-model="c.ill" ng-options=" x for x in data.whoisill" ng-change= "c.selectedIll(c.ill)">
+      </select></td>
+     </tr>
+    <tr ng-show="c.whoShow">
+    <td class="first">Are you answering for yourself or someoneelse? </td><td> <select ng-model="c.who" ng-options=" x for x in data.whoanswers" ng-change="c.selectedWho(c.who)">
+      </select></td>
+    </tr>
+    {{c.ill}}
+
+    
+    <tr ng-show="c.ageShow">
+      <td class="first">What is your age? </td> <td><select  ng-model="c.age" ng-options=" x for x in data.age" ng-change= "c.selectedAge(c.age)">
+      </select></td>
+     </tr>
+    
+  </table>
+  
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spUtil) {
+  /* widget controller */
+  var c = this;
+	c.country = 'India'
+	c.selectedCountry = function(country){
+		//spUtil.addInfoMessage(country);
+		c.data.selectedCountry = country;
+		//console.log(country);
+		c.server.update().then(function(){
+			
+		c.data.selectedCountry = undefined;
+		})
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-footer.panel-custom {
+    background: grey;
+    color: white;
+    font-size: 15px;
+}
+p{
+  font-size: 17px;
+}
+panel-footer{
+  font-size: 19px;
+}
+
+.outer{
+  height:400px;
+}
+
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>CoviD-19</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  var countryCode = {'India':'india','America':'united-states','Italy':'italy','Germany':'germany','Japan':'japan'};
+	//data.items = "demo";
+	data.countries = ["India","America","Italy","Germany","Japan"];
+  var last =  getResult('india');
+		data.confirmed = last['Confirmed'];
+		data.Deaths = last['Deaths'];
+		data.Recovered = last['Recovered'];
+		data.Active = last['Active'];
+	
+	  if(input && input.selectedCountry){
+		var last =  getResult(countryCode[input.selectedCountry]);
+		data.confirmed = last['Confirmed'];
+		data.Deaths = last['Deaths'];
+		data.Recovered = last['Recovered'];
+		data.Active = last['Active'];
+		}
+	
+	function getResult(country){
+			try { 
+		var r = new sn_ws.RESTMessageV2('x_457227_health_ca.COVID-19', 'testing');
+		    r.setStringParameterNoEscape('country', country); 
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+
+		var j = JSON.parse(responseBody);
+		var last = j[j.length-1];
+		//data.confirmed = last['Confirmed'];
+		//data.Deaths = last['Deaths'];
+		//data.Recovered = last['Recovered'];
+		//data.Active = last['Active'];
+    return last;
+    }
+    catch(ex) {
+    var message = ex.message;
+   }
+}
+	
+	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-06 03:56:43</sys_created_on>
+        <sys_id>2840156adb209c109d0264d7489619e5</sys_id>
+        <sys_mod_count>44</sys_mod_count>
+        <sys_name>CoviD-19</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_widget_2840156adb209c109d0264d7489619e5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-11 08:55:57</sys_updated_on>
+        <template><![CDATA[<div class="outer">
+    <div class="panel panel-default">
+      <div class="panel-heading">COVID-19 Live Updates</div>
+      
+      <div class="panel-body">
+        Select Country : <select  ng-model="c.country" ng-options=" country for country in data.countries" ng-change= "c.selectedCountry(c.country)"></select>
+      <br><br>
+      <p class="text-info" > Confirmed Cases : {{data.confirmed}}</p>
+      <p class="text-success" > Recovered Cases : {{data.Recovered}}</p>
+      <p class="text-danger" > Active Cases : {{data.Active}}</p>
+      <p class="text-light" >Deaths Cases : {{data.Deaths}}</p>
+
+      </div>
+      <div class="panel-footer"><center>STAY HOME | STAY SAFE</center></div>
+            <div class="panel-footer panel-custom"><center>Toll Free : 1075 | Helpline Email ID : ncov2019@gov.in</center></div>
+    </div>
+ 
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spUtil) {
+  /* widget controller */
+  var c = this;
+	c.country = 'India'
+	c.selectedCountry = function(country){
+		//spUtil.addInfoMessage(country);
+		c.data.selectedCountry = country;
+		//console.log(country);
+		c.server.update().then(function(){
+			
+		c.data.selectedCountry = undefined;
+		})
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-footer.panel-custom {
+    background: grey;
+    color: white;
+    font-size: 15px;
+}
+p{
+  font-size: 15px;
+}
+panel-footer{
+  font-size: 19px;
+}
+
+.outer{
+  height:400px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hospitalboard</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>HospitalBoard</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+ //data.items = "demo";
+	//data.countries = ["India","America","Italy","Germany","Japan"];
+ 
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-10 08:26:39</sys_created_on>
+        <sys_id>1174fab3dbe014509d0264d7489619c6</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>HospitalBoard</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_widget_1174fab3dbe014509d0264d7489619c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-11 08:56:55</sys_updated_on>
+        <template><![CDATA[<div class="outer">
+    <div class="panel panel-default">
+      <div class="panel-heading">Hospital Timings</div>
+      
+      <div class="panel-body">
+       <p class="text-info"> Monday  &nbsp &nbsp &nbsp &nbsp &nbsp 10pm-7pm</p>
+       <p class="text-info" > Tuesday &nbsp &nbsp &nbsp &nbsp &nbsp 10pm-7pm</p>
+       <p class="text-info" > Wednesday &nbsp &nbsp 10pm-7pm</p>
+       <p class="text-info" > Thrusday &nbsp  &nbsp &nbsp &nbsp 10pm-7pm</p>
+       <p class="text-info" > Friday &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp 10pm-7pm</p>
+       <p class="text-info" > Saturday/Sunday&nbsp &nbsp &nbsp &nbsp Closed</p>
+      
+           
+     
+  </div>
+       <div class="panel-footer"><center>Address: Karve nagar,Kothrud</center></div>
+      <div class="panel-footer panel-custom"><center>Toll Free 8888-28-3745<br> Ambulance Services 9812348976</center></div>
+    </div>
+ 
+</div>]]></template>
+    </sp_widget>
+</record_update>

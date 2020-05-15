@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($rootScope, $timeout, $http, $scope) {
+	/* widget controller */
+	var c = this;
+
+	c.$onInit = function() {
+    	c.selectedSlot = "";
+    	c.doctor= c.data.doctorList;
+			c.options.show_short_description ='true';
+   	 
+
+	};
+
+	c.taskDefine = function(doctor){
+
+    	task_appointment_record = c.selectedDoctor.sys_id.display_value;
+    	c.selectedDoctor = doctor;
+	//	console.log(c.data.doctorSchedule);
+        	c.server.update();
+     	c.data.doctorSchedule= c.selectedDoctor.sys_id.display_value;
+    	c.data.dateForm = c.data.dateFormat
+
+    	c.timeSlotReturn = "";
+    	c.alertSuccess = false;
+    	c.setReminder = false;
+    	c.appntUser = c.data.userName;
+    	c.appntUserSysid = c.data.userID;
+    	c.appntUserMail = c.data.userEmail;
+    	c.appntShortDescription = "";
+    	c.appntDescription = "";
+    	c.appntLocationSysid = "";
+    	//c.selectedReminderTime = c.data.reminderTimes[0];
+
+	//	c.server.update();
+
+
+	};
+
+
+	c.getTimeSlots = function(date) {
+   	 
+   	 
+    	c.dateFormatted = moment(date).format(c.data.dateFormat);
+
+    	c.server.get({
+       	 
+        	action: 'getTimeSlots',
+        	forDoctor : c.selectedDoctor.sys_id.display_value,
+        	selectedDate: moment(date).format("YYYY-MM-DD")
+       	 
+    	}).then(function(response) {
+        	//gs.info("in time slot");
+        	if (response.data.timeSlots && response.data.timeSlots.length > 0) {
+            	c.timeSLots = JSON.parse(response.data.timeSlots);
+            	if (c.options.layout == 'Dropdown') {
+                	c.selectedSlot = c.timeSLots[0];
+
+            	}
+        	}
+
+    	});
+
+	};
+
+  c.userChosen = function(user) {
+    	c.appntUser = user;
+    	c.appntUserSysid = user.sys_id;
+	};
+
+	c.getUsers = function(val) {
+    	return $http.get('/api/now/table/sys_user?sysparm_query=nameLIKE' + val + '^ORfirst_nameLIKE' + val + '^ORlast_nameLIKE' + val + '&sysparm_limit=5', {
+        	headers: {
+            	'Accept': 'application/json',
+            	'Content-Type': 'application/json',
+            	'X-UserToken': window.g_ck
+        	}
+    	}).then(function(response) {
+
+        	return response.data.result;
+    	});
+	};
+
+c.datePickerPopup = {
+    	opened: false
+	};
+    
+    
+
+	c.openDatePickerPopup = function() {
+    	c.datePickerPopup.opened = true;
+	};
+    
+ 	c.submitTimeSlot = function(selectedDate, selectedSlot) {
+      	var doctor = c.selectedDoctor.sys_id.display_value;
+
+  	var obj = {
+        	'action': 'setTimeSlots',
+                  	'forDoctorName' :doctor,
+        	'meetingDate': selectedDate,
+        	'meetingTime': selectedSlot
+    	};
+   	// if (c.appntLocation || c.appntDescription || c.appntShortDescription) {
+        	obj.additionalFields = {
+            	'short_description': c.appntShortDescription,
+            	'description': c.appntDescription,
+            	'location': c.appntLocationSysid,
+                          	'opened_by': c.appntUser,
+                          	'u_email_2': c.appntUserMail,
+                          	'u_time_2' : c.selectedSlot.time_slot,
+
+                          	'u_date': c.selectedDate
+        	};
+   	// }
+    	if (c.options.show_appointment_for == 'true' && c.appntUser) {
+        	obj.additionalFields.appointment_for = c.appntUserSysid;
+    	}
+
+    	c.server.get(obj).then(function(response) {
+        	if (response.data.timeSlotReturn) {
+            	c.timeSlotReturn = JSON.parse(response.data.timeSlotReturn);
+            	if (c.timeSlotReturn.sys_id) {
+                	c.alertSuccess = true;
+                	c.timeFormatted = c.timeSlotReturn.time_slot;
+                	if (c.setReminder) {
+                    	c.setupReminder(c.selectedReminderTime.value.display_value);
+                	}
+                	c.getTimeSlots(selectedDate);
+                	c.appntUserSysid = c.data.userID;
+                	c.appntUser = c.data.userName;
+                	c.appntShortDescription = "";
+                	c.appntDescription = "";
+                	c.appntLocationSysid = "";
+                	c.appntLocation = "";
+                	$rootScope.$broadcast('appointmentCreated', '');
+            	}
+        	}
+    	});
+	};
+
+ function populateDate() {
+    	c.minDate = new Date();
+    	c.getTimeSlots(c.minDate);
+    	c.selectedDate = c.minDate;
+    	c.dateFormatted = moment(c.selectedDate).format(c.data.dateFormat);
+    	return c.minDate;
+	}    
+
+}
+
+
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>$time-slot-bg:#e4edf9;
+$time-slot-text:#607795;
+$brand-primary:#4b8cfb !default;
+.btn-submit {
+    width: 10%;
+    min-width: 80px;
+    @media screen and (max-width: 769px) {
+        width: 100%;
+    }
+}
+
+.switch-part {
+    width: 25%;
+    float: left;
+    min-width: 160px;
+    @media screen and (max-width: 769px) {
+        width: 50%;
+    }
+}
+
+.time-selector {
+    width: 30%;
+    min-width: 150px;
+    float: left;
+    @media screen and (max-width: 769px) {
+        width: 50%;
+    }
+}
+
+.time-card-container {
+    clear: both;
+    overflow: hidden;
+}
+
+.time-cards {
+    width: 47%;
+    height: 60px;
+    float: left;
+    padding: 10px;
+    color: $time-slot-text;
+    margin: 5px;
+    font-size: 18px;
+    background: $time-slot-bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 414px) {
+        width: 100%;
+    }
+    &amp;.btn-selected {
+        background: $brand-primary;
+        color: #fff;
+        .fa {
+            color: #fff;
+        }
+    }
+    p {
+        margin: 0px;
+    }
+}
+
+.appointment-scheduler {
+    min-width: 320px;
+    background: #fff;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .btn.disabled {
+        opacity: .35;
+    }
+    .reminder-setup {
+        padding: 10px;
+        span {
+            font-size: 16px;
+        }
+        .reminder-select {
+            display: inline-block;
+            width: 100px;
+            margin-left: 5px;
+            margin-right: 5px;
+            height: 30px;
+        }
+    }
+    h3 {
+        margin-top: 10px;
+        font-weight: 300;
+    }
+    .uib-datepicker .btn-default {
+        border: 1px solid #fff;
+    }
+    table.uib-daypicker thead tr:nth-child(2) {
+        background-color: aliceblue;
+    }
+    .btn-info.active {
+        border-radius: 50%;
+        color: #fff;
+        .text-info {
+            color: #fff;
+        }
+    }
+    .btn[disabled] {
+        opacity: 0.35;
+    }
+    .uib-button-bar {
+        .uib-datepicker-current {
+            background: inherit;
+            color: $brand-info;
+            border: 0px;
+        }
+        .uib-clear {
+            background: inherit;
+            color: $brand-danger;
+            border: 0px;
+        }
+        .uib-close {
+            background: inherit;
+            color: $brand-success;
+            border: 0px;
+        }
+    }
+    .remove-padding-left {
+        padding-left: 0px;
+    }
+    .flex-it {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button-div {
+        display: inline-block;
+    }
+    .alert-div {
+        margin-top: 30px;
+        position: relative;
+        clear: both;
+        .close {
+            position: absolute;
+            right: 6px;
+            top: 3px;
+        }
+    }
+    .slot-selector {
+        margin-top: 20px;
+        .appt-dateformatted {
+            float: left;
+            margin: 0;
+            margin-left: 57px;
+            margin-top: -38px;
+            margin-right: 15px;
+            height: 18px;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1;
+            z-index: 400;
+            color: #aaaaaa;
+            background-color: #ffffff;
+            position: relative;
+        }
+        .appt-change {
+            float: right;
+            margin-top: -38px;
+            margin-right: 15px;
+            letter-spacing: 1.1px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.5;
+            color: $brand-primary;
+            z-index: 400;
+            position: relative;
+            @media screen and (max-width: 300px) {
+                display: none;
+            }
+        }
+        .appt-datepicker {
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .input-group,
+        .form-group {
+            margin: 0 auto;
+            width: 100%;
+        }
+        .uidatepicker {
+            border-radius: 0px;
+            height: 60px;
+            background: no-repeat scroll 20px 15px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDIzIDI2Ij4gICAgPGcgZmlsbD0iI0RERCIgZmlsbC1ydWxlPSJub256ZXJvIj4gICAgICAgIDxwYXRoIGQ9Ik0yMC45MjcgMjZIMS45MDJBMS44NjggMS44NjggMCAwIDEgMCAyNC4wOThWNS4wNzNjMC0xLjA3OC44MjQtMS45MDIgMS45MDItMS45MDJoMTkuMDI1YzEuMDc4IDAgMS45MDIuODI0IDEuOTAyIDEuOTAydjE5LjAyNUExLjg2OCAxLjg2OCAwIDAgMSAyMC45MjcgMjZ6TTEuOTAyIDQuNDM5Yy0uMzggMC0uNjM0LjI1NC0uNjM0LjYzNHYxOS4wMjVjMCAuMzguMjU0LjYzNC42MzQuNjM0aDE5LjAyNWMuMzggMCAuNjM0LS4yNTQuNjM0LS42MzRWNS4wNzNjMC0uMzgtLjI1NC0uNjM0LS42MzQtLjYzNEgxLjkwMnpNNS4wNzMgMGgxLjI2OHYzLjE3MUg1LjA3M3pNMTYuNDg4IDBoMS4yNjh2My4xNzFoLTEuMjY4eiIvPiAgICAgICAgPHBhdGggZD0iTTExLjQxNSAxMC4xNDZBMi41NDQgMi41NDQgMCAwIDEgOC44NzggNy42MWEyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNy0yLjUzN0EyLjU0NCAyLjU0NCAwIDAgMSAxMy45NSA3LjYxYTIuNTQ0IDIuNTQ0IDAgMCAxLTIuNTM2IDIuNTM2em0wLTMuODA1Yy0uNjk4IDAtMS4yNjkuNTcxLTEuMjY5IDEuMjY5IDAgLjY5Ny41NzEgMS4yNjggMS4yNjkgMS4yNjguNjk3IDAgMS4yNjgtLjU3IDEuMjY4LTEuMjY4IDAtLjY5OC0uNTctMS4yNjktMS4yNjgtMS4yNjl6TTE3Ljc1NiAxMC4xNDZBMi41NDQgMi41NDQgMCAwIDEgMTUuMjIgNy42MWEyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNi0yLjUzNyAyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNyAyLjUzNyAyLjU0NCAyLjU0NCAwIDAgMS0yLjUzNyAyLjUzNnptMC0zLjgwNWMtLjY5NyAwLTEuMjY4LjU3MS0xLjI2OCAxLjI2OSAwIC42OTcuNTcgMS4yNjggMS4yNjggMS4yNjguNjk4IDAgMS4yNjgtLjU3IDEuMjY4LTEuMjY4IDAtLjY5OC0uNTctMS4yNjktMS4yNjgtMS4yNjl6TTUuMDczIDE2LjQ4OGEyLjU0NCAyLjU0NCAwIDAgMS0yLjUzNi0yLjUzNyAyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNi0yLjUzNkEyLjU0NCAyLjU0NCAwIDAgMSA3LjYxIDEzLjk1YTIuNTQ0IDIuNTQ0IDAgMCAxLTIuNTM3IDIuNTM3em0wLTMuODA1Yy0uNjk3IDAtMS4yNjguNTctMS4yNjggMS4yNjggMCAuNjk4LjU3IDEuMjY5IDEuMjY4IDEuMjY5LjY5OCAwIDEuMjY4LS41NzEgMS4yNjgtMS4yNjkgMC0uNjk3LS41Ny0xLjI2OC0xLjI2OC0xLjI2OHpNMTEuNDE1IDE2LjQ4OGEyLjU0NCAyLjU0NCAwIDAgMS0yLjUzNy0yLjUzNyAyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNy0yLjUzNiAyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNiAyLjUzNiAyLjU0NCAyLjU0NCAwIDAgMS0yLjUzNiAyLjUzN3ptMC0zLjgwNWMtLjY5OCAwLTEuMjY5LjU3LTEuMjY5IDEuMjY4IDAgLjY5OC41NzEgMS4yNjkgMS4yNjkgMS4yNjkuNjk3IDAgMS4yNjgtLjU3MSAxLjI2OC0xLjI2OSAwLS42OTctLjU3LTEuMjY4LTEuMjY4LTEuMjY4ek0xNy43NTYgMTYuNDg4YTIuNTQ0IDIuNTQ0IDAgMCAxLTIuNTM2LTIuNTM3IDIuNTQ0IDIuNTQ0IDAgMCAxIDIuNTM2LTIuNTM2IDIuNTQ0IDIuNTQ0IDAgMCAxIDIuNTM3IDIuNTM2IDIuNTQ0IDIuNTQ0IDAgMCAxLTIuNTM3IDIuNTM3em0wLTMuODA1Yy0uNjk3IDAtMS4yNjguNTctMS4yNjggMS4yNjggMCAuNjk4LjU3IDEuMjY5IDEuMjY4IDEuMjY5LjY5OCAwIDEuMjY4LS41NzEgMS4yNjgtMS4yNjkgMC0uNjk3LS41Ny0xLjI2OC0xLjI2OC0xLjI2OHpNNS4wNzMgMjIuODNhMi41NDQgMi41NDQgMCAwIDEtMi41MzYtMi41MzcgMi41NDQgMi41NDQgMCAwIDEgMi41MzYtMi41MzcgMi41NDQgMi41NDQgMCAwIDEgMi41MzcgMi41MzcgMi41NDQgMi41NDQgMCAwIDEtMi41MzcgMi41MzZ6bTAtMy44MDZjLS42OTcgMC0xLjI2OC41NzEtMS4yNjggMS4yNjkgMCAuNjk3LjU3IDEuMjY4IDEuMjY4IDEuMjY4LjY5OCAwIDEuMjY4LS41NyAxLjI2OC0xLjI2OCAwLS42OTgtLjU3LTEuMjY5LTEuMjY4LTEuMjY5eiIvPiAgICA8L2c+PC9zdmc+);
+            background-color: #fff;
+            padding-left: 60px;
+            @media (max-width: 320px) {
+                max-width: 290px;
+                background: no-repeat scroll 10px 15px;
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDIzIDI2Ij4gICAgPGcgZmlsbD0iI0RERCIgZmlsbC1ydWxlPSJub256ZXJvIj4gICAgICAgIDxwYXRoIGQ9Ik0yMC45MjcgMjZIMS45MDJBMS44NjggMS44NjggMCAwIDEgMCAyNC4wOThWNS4wNzNjMC0xLjA3OC44MjQtMS45MDIgMS45MDItMS45MDJoMTkuMDI1YzEuMDc4IDAgMS45MDIuODI0IDEuOTAyIDEuOTAydjE5LjAyNUExLjg2OCAxLjg2OCAwIDAgMSAyMC45MjcgMjZ6TTEuOTAyIDQuNDM5Yy0uMzggMC0uNjM0LjI1NC0uNjM0LjYzNHYxOS4wMjVjMCAuMzguMjU0LjYzNC42MzQuNjM0aDE5LjAyNWMuMzggMCAuNjM0LS4yNTQuNjM0LS42MzRWNS4wNzNjMC0uMzgtLjI1NC0uNjM0LS42MzQtLjYzNEgxLjkwMnpNNS4wNzMgMGgxLjI2OHYzLjE3MUg1LjA3M3pNMTYuNDg4IDBoMS4yNjh2My4xNzFoLTEuMjY4eiIvPiAgICAgICAgPHBhdGggZD0iTTExLjQxNSAxMC4xNDZBMi41NDQgMi41NDQgMCAwIDEgOC44NzggNy42MWEyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNy0yLjUzN0EyLjU0NCAyLjU0NCAwIDAgMSAxMy45NSA3LjYxYTIuNTQ0IDIuNTQ0IDAgMCAxLTIuNTM2IDIuNTM2em0wLTMuODA1Yy0uNjk4IDAtMS4yNjkuNTcxLTEuMjY5IDEuMjY5IDAgLjY5Ny41NzEgMS4yNjggMS4yNjkgMS4yNjguNjk3IDAgMS4yNjgtLjU3IDEuMjY4LTEuMjY4IDAtLjY5OC0uNTctMS4yNjktMS4yNjgtMS4yNjl6TTE3Ljc1NiAxMC4xNDZBMi41NDQgMi41NDQgMCAwIDEgMTUuMjIgNy42MWEyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNi0yLjUzNyAyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNyAyLjUzNyAyLjU0NCAyLjU0NCAwIDAgMS0yLjUzNyAyLjUzNnptMC0zLjgwNWMtLjY5NyAwLTEuMjY4LjU3MS0xLjI2OCAxLjI2OSAwIC42OTcuNTcgMS4yNjggMS4yNjggMS4yNjguNjk4IDAgMS4yNjgtLjU3IDEuMjY4LTEuMjY4IDAtLjY5OC0uNTctMS4yNjktMS4yNjgtMS4yNjl6TTUuMDczIDE2LjQ4OGEyLjU0NCAyLjU0NCAwIDAgMS0yLjUzNi0yLjUzNyAyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNi0yLjUzNkEyLjU0NCAyLjU0NCAwIDAgMSA3LjYxIDEzLjk1YTIuNTQ0IDIuNTQ0IDAgMCAxLTIuNTM3IDIuNTM3em0wLTMuODA1Yy0uNjk3IDAtMS4yNjguNTctMS4yNjggMS4yNjggMCAuNjk4LjU3IDEuMjY5IDEuMjY4IDEuMjY5LjY5OCAwIDEuMjY4LS41NzEgMS4yNjgtMS4yNjkgMC0uNjk3LS41Ny0xLjI2OC0xLjI2OC0xLjI2OHpNMTEuNDE1IDE2LjQ4OGEyLjU0NCAyLjU0NCAwIDAgMS0yLjUzNy0yLjUzNyAyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNy0yLjUzNiAyLjU0NCAyLjU0NCAwIDAgMSAyLjUzNiAyLjUzNiAyLjU0NCAyLjU0NCAwIDAgMS0yLjUzNiAyLjUzN3ptMC0zLjgwNWMtLjY5OCAwLTEuMjY5LjU3LTEuMjY5IDEuMjY4IDAgLjY5OC41NzEgMS4yNjkgMS4yNjkgMS4yNjkuNjk3IDAgMS4yNjgtLjU3MSAxLjI2OC0xLjI2OSAwLS42OTctLjU3LTEuMjY4LTEuMjY4LTEuMjY4ek0xNy43NTYgMTYuNDg4YTIuNTQ0IDIuNTQ0IDAgMCAxLTIuNTM2LTIuNTM3IDIuNTQ0IDIuNTQ0IDAgMCAxIDIuNTM2LTIuNTM2IDIuNTQ0IDIuNTQ0IDAgMCAxIDIuNTM3IDIuNTM2IDIuNTQ0IDIuNTQ0IDAgMCAxLTIuNTM3IDIuNTM3em0wLTMuODA1Yy0uNjk3IDAtMS4yNjguNTctMS4yNjggMS4yNjggMCAuNjk4LjU3IDEuMjY5IDEuMjY4IDEuMjY5LjY5OCAwIDEuMjY4LS41NzEgMS4yNjgtMS4yNjkgMC0uNjk3LS41Ny0xLjI2OC0xLjI2OC0xLjI2OHpNNS4wNzMgMjIuODNhMi41NDQgMi41NDQgMCAwIDEtMi41MzYtMi41MzcgMi41NDQgMi41NDQgMCAwIDEgMi41MzYtMi41MzcgMi41NDQgMi41NDQgMCAwIDEgMi41MzcgMi41MzcgMi41NDQgMi41NDQgMCAwIDEtMi41MzcgMi41MzZ6bTAtMy44MDZjLS42OTcgMC0xLjI2OC41NzEtMS4yNjggMS4yNjkgMCAuNjk3LjU3IDEuMjY4IDEuMjY4IDEuMjY4LjY5OCAwIDEuMjY4LS41NyAxLjI2OC0xLjI2OCAwLS42OTgtLjU3LTEuMjY5LTEuMjY4LTEuMjY5eiIvPiAgICA8L2c+PC9zdmc+);
+                padding-left: 40px;
+            }
+        }
+    }
+    .reminder-select {
+        width: 100px;
+        height: 28px;
+        margin-top: 10px;
+        padding: 0px;
+        padding-left: 3px;
+        display: inline-flex;
+        @media (max-width: 320px) {
+            margin-left: -25px;
+        }
+    }
+    .reminder-select-label {
+        position: absolute;
+        margin-left: 8px;
+        margin-top: 14px;
+        font-size: 16px;
+        color: $brand-primary;
+    }
+    /* line 1, sass/custom/_switches.scss */
+    input[type=checkbox] {
+        visibility: hidden;
+    }
+    .switch-label {
+        position: absolute;
+        margin-left: 8px;
+        margin-top: 4px;
+        font-size: 16px;
+        color: $brand-primary;
+    }
+    .input-switch {
+        height: 28px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        @media (max-width: 320px) {
+            margin-left: -15px;
+        }
+    }
+    /* line 21, sass/custom/_switches.scss */
+    .input-switch input[type=checkbox]~.switch {
+        background-color: #aaaaaa;
+        width: 50px;
+        height: 27px;
+        border-radius: 12.5px;
+        position: relative;
+        display: inline-block;
+        transition: all 0.4s;
+        /*box-shadow: inset 0px 0px 3px 0px #777;*/
+    }
+    /* line 31, sass/custom/_switches.scss */
+    .input-switch input[type=checkbox]~.switch:before {
+        content: '';
+        color: transparent;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 45%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: 2px;
+        transition: all 0.4s;
+        /*box-shadow: 0 6px 18px -9px #000000;*/
+    }
+    /* line 51, sass/custom/_switches.scss */
+    .input-switch input[type=checkbox]:checked~.switch {
+        background-color: $brand-primary;
+    }
+    /* line 54, sass/custom/_switches.scss */
+    .input-switch input[type=checkbox]:checked~.switch:before {
+        left: 23.5px;
+    }
+    /* line 61, sass/custom/_switches.scss */
+    .input-switch input[type=checkbox]:disabled~.switch {
+        opacity: 0.5;
+    }
+    /* line 69, sass/custom/_switches.scss */
+    .input-switch input[type=checkbox]:hover~.switch:before {
+        box-shadow: 0px;
+        /*box-shadow: 0 6px 18px -5px #000000;*/
+    }
+    /* line 76, sass/custom/_switches.scss */
+    .input-switch input[type=checkbox]:focus~.switch {
+        border: 0px;
+        box-shadow: 0px;
+        /*border: 1px solid #278efc;*/
+        /*box-shadow: 0px 0px 6px 1px #278efc, inset 0px 0px 3px 0px #777;*/
+    }
+    /* line 87, sass/custom/_switches.scss */
+    .input-switch.input-switch-accessibility input[type=checkbox]~.switch:after {
+        content: '0';
+        color: #485563;
+        width: 45%;
+        position: absolute;
+        left: 23.5px;
+        top: 0;
+        bottom: 0;
+        margin: 2px;
+        line-height: 23px;
+        text-align: center;
+        font-weight: bold;
+    }
+    /* line 104, sass/custom/_switches.scss */
+    .input-switch.input-switch-accessibility input[type=checkbox]:checked~.switch:after {
+        content: '1';
+        color: #fff;
+        left: 0;
+    }
+    button {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        &amp;.btn-slots {
+            border-color: transparent;
+            background: $time-slot-bg;
+            color: $time-slot-text;
+            width: 70px;
+            height: 34px;
+            @media (max-width: 414px) {
+                width: 75px;
+            }
+        }
+        &amp;.btn-selected {
+            background: $brand-primary;
+            color: #fff;
+        }
+    }
+    .no-slots {
+        color: $brand-danger;
+    }
+    .chiclets {
+        clear: both;
+    }
+    .appt-field textarea {
+        border-radius: 0px;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        width: 100%;
+        resize: none;
+        font-size: 18px;
+        color: $bam-dark-gray;
+        margin-top: 4px;
+        padding-bottom: 0px;
+        background-color: transparent;
+        border: 0px solid transparent;
+        border-bottom: 1px solid #aaa;
+    }
+    .appt-field-placeholder {
+        opacity: 0.6;
+        position: relative;
+    }
+    .appt-field {
+        border-bottom: 0px solid transparent;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        clear: both;
+         :focus {
+            border-bottom: 1px solid $brand-primary;
+            color: $brand-primary;
+        }
+    }
+    .appt-field :focus {
+        border-bottom: 1px solid $brand-primary;
+        color: $brand-primary;
+    }
+    .appt-field input {
+        padding-left: 0px;
+        height: 53px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        border-radius: 0px;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        width: 100%;
+        max-width: 100%;
+        font-size: 18px;
+        color: #7f7f7f;
+        padding-bottom: 0px;
+        background-color: transparent;
+        border: 0px solid transparent;
+        border-bottom: 1px solid #aaa;
+    }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>copy_of_appointment_scheduling</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>copy of appointment scheduling</name>
+        <option_schema>[{"name":"title","label":"Title","type":"string"},{"displayValue":"Task Appointment","name":"task_appointment_record","label":"Task Appointment Definition","type":"reference","value":"u_task_appointment","ed":{"reference":"u_task_appointment"}},{"hint":"Appointment button layout choices","name":"layout","default_value":"Chiclets","label":"Layout Options","type":"choice","choices":[{"label":"Dropdown","value":"Dropdown"},{"label":"Chiclets","value":"Chiclets"},{"label":"Timecards","value":"Timecards"}]},{"hint":"This leverages an out of the box feature that will send an email prior to a date/time value in a task.","name":"allow_reminders","default_value":"","label":"Allow reminders","type":"boolean"},{"name":"max_date","default_value":"30","label":"Maximum available date (in days)","type":"integer"},{"name":"show_appointment_for","label":"Prompt for Appointment For User","type":"boolean"},{"name":"appointment_for_label","default_value":"Appointment For","label":"Label for Appointment For","type":"string"},{"name":"show_short_description","label":"Show Short Description","type":"boolean"},{"name":"show_description","label":"Show Description","type":"boolean"},{"name":"show_location","label":"Show Location","type":"boolean"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[// populate the 'data' variable with catalog item, variables, and variable view
+(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+    
+	data.doctorList = getDoctor();
+	data.dateFormat = getDateFormat();
+  	data.userID = gs.getUserID();
+	data.userName = gs.getUserDisplayName();
+  	data.userEmail = gs.getUser().getEmail();
+	// data.Doctor = input.forDoctor;
+   // data.reminderTimes = getReminderChoices();
+
+    
+    	function getDoctor() {
+       	 
+	var gr = new GlideRecord('u_task_appointment');
+    	var doctorList = [];
+   	 
+    	gr.query();
+
+    	while (gr.next()) {
+        	var obj = {};
+        	$sp.getRecordElements(obj, gr, 'u_name,sys_id');
+        	doctorList.push(obj);
+
+    	}
+    	//var answer = new JSON().encode(doctorList);
+    	return doctorList;
+   	 
+	}
+    
+    	function getDateFormat() {
+    	var taskApptRec = new GlideRecord("u_task_appointment");
+           	//gs.log("in dateFormat " + input.doctorSchedule);
+    	taskApptRec.get(data.doctorSchedule);
+    	return taskApptRec.getValue("u_widget_date_format");
+	}
+	var grAppt=new GlideRecord("x_438514_health_ca_appmt_hcm");
+
+    
+	if(input){
+   	 
+         	if (input.action == 'getTimeSlots') {
+               	// gs.info("In Get slots"+input.forDoctor)    
+        	data.timeSlots = new global.TaskAppointmentUtils().getTimeSlots(input.forDoctor, input.selectedDate);
+             	 
+    	}
+   	 
+            	if (input.action == 'setTimeSlots') {
+                      	//  gs.log("in setTimeSLot "+ input.forDoctorName)
+   							 
+        	data.timeSlotReturn = new global.TaskAppointmentUtils().createAppointment(input.forDoctorName, input.meetingTime, input.additionalFields);
+    	}
+    	if (input.action == 'setupReminder') {
+        	data.reminderReturn = new global.TaskAppointmentUtils().createReminder(input.taskSysid, input.selectedTime, input.taskUserid);
+    	}
+   	 
+	}
+
+
+})();
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-13 10:17:25</sys_created_on>
+        <sys_id>fb7b87f3db3200109d0264d748961918</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>copy of appointment scheduling</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_widget_fb7b87f3db3200109d0264d748961918</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-14 06:50:48</sys_updated_on>
+        <template><![CDATA[<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+  <symbol id="icon-location" width="20" height="26" viewBox="0 0 20 26">
+	<path d="M9.68 26C8.133 26 0 14.826 0 9.68 0 4.37 4.37 0 9.68 0c5.311 0 9.682 4.37 9.682 9.68C19.362 14.827 11.23 26 9.68 26zm0-24.894c-4.701 0-8.574 3.873-8.574 8.575 0 4.702 7.192 14.162 8.575 15.157 1.383-.995 8.574-10.51 8.574-15.157 0-4.702-3.872-8.575-8.574-8.575z"/>
+	<path d="M9.68 13.83c-2.267 0-4.148-1.881-4.148-4.15 0-2.267 1.88-4.148 4.149-4.148 2.268 0 4.149 1.88 4.149 4.149 0 2.268-1.881 4.149-4.15 4.149zm0-7.192c-1.659 0-3.042 1.383-3.042 3.043 0 1.66 1.383 3.042 3.043 3.042 1.66 0 3.042-1.383 3.042-3.042 0-1.66-1.383-3.043-3.042-3.043z"/>
+  </symbol>
+  <symbol id='icon-arrow' width="23" height="12" viewBox="0 0 23 12">
+	<path fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" d="M1.438.429L11.501 11.57 21.563.43"/>
+  </symbol>
+</svg>
+<div class="appointment-scheduler row">
+  <h3>{{c.options.title}}</h3>
+
+
+  <div class="col-xs-12 remove-padding-left slot-selector">
+
+
+	<!--##################choose doctor ############################-->
+	<div class="form-group col-md-12 remove-padding-left" >
+  	<p class="no-slots" ng-show="c.doctor.length == 0">
+    	-- No doctors allocated --
+  	</p>
+    
+  	<h3>
+   	 
+  	</h3>
+
+  	<select ng-show="c.doctor.length != 0" class="form-control" ng-options="doctor as doctor.u_name.display_value for doctor in c.doctor" ng-model="c.selectedDoctor" ng-change ="c.taskDefine(c.selectedDoctor)"></select>
+       	 
+	</div>
+
+	<div class="form-group col-md-12 remove-padding-left" ng-if="c.selectedDoctor">
+ 
+  	<div class='appt-datepicker'>
+    	<p class="input-group">
+      	<input type="text" class="form-control uidatepicker" uib-datepicker-popup ng-model="c.selectedDate" is-open="c.datePickerPopup.opened" datepicker-options="c.dateOptions" ng-required="true" close-text="Close" ng-change="c.getTimeSlots(c.selectedDate)"
+             	ng-click="c.openDatePickerPopup()" />
+      	<span class='appt-dateformatted' ng-click="c.openDatePickerPopup()">{{c.dateFormatted}}</span>
+      	<span class='appt-change' ng-click="c.openDatePickerPopup()">CHANGE</span>
+    	</p>
+  	</div>
+   
+  	<div class="form-group col-md-12 remove-padding-left" >
+    	<p class="no-slots" ng-show="c.timeSLots.length == 0">
+      	-- No appointments available for selected date --
+    	</p>
+  	<select ng-show="c.timeSLots.length != 0" class="form-control" ng-options="slot as slot.time_slot for slot in c.timeSLots" ng-model="c.selectedSlot">{{slot.u_time_2}}</select>
+       	 
+  	</div>
+	</div>
+
+
+
+
+	<!--################## Appointment For ############################-->
+	<div class="appt-field" ng-if="c.options.show_appointment_for === 'true'">
+  	<label for="user">{{c.options.appointment_for_label}}</label>
+  	<input id="user" ng-class="{'appt-field-placeholder' : !c.appntUserSysid}" typeahead-on-select="c.userChosen($item)" type="text" ng-model="c.appntUser" uib-typeahead="user as user.name for user in c.getUsers($viewValue)"
+         	typeahead-no-results="noResults" class="autocomplete" placeholder="Appointment For">
+	</div>
+	<!--################## SHORT DESCRIPTION ############################-->
+	<div ng-if="c.options.show_short_description === 'true'" class='appt-field' ng-class="{'appt-field-placeholder' : c.appntShortDescription.length === 0}">
+  	<textarea ng-model='c.appntShortDescription' placeholder='Short description'></textarea>
+	</div>
+	<!--################## DESCRIPTION ############################-->
+	<div ng-if="c.options.show_description === 'true'" class='appt-field' ng-class="{'appt-field-placeholder' : c.appntDescription.length === 0}">
+  	<textarea ng-model='c.appntDescription' placeholder='Description'></textarea>
+	</div>
+	<!--################## LOCATION ############################-->
+	<div class="appt-field" ng-if="c.options.show_location === 'true'">
+  	<input id="location" ng-class="{'appt-field-placeholder' : !c.appntLocation}" typeahead-on-select="c.locationChosen($item)" type="text" ng-model="c.appntLocation" uib-typeahead="location as location.name for location in c.getLocations($viewValue)"
+         	typeahead-no-results="noResults" class="autocomplete" placeholder="Location">
+	</div>
+	<!--################## REMINDER ############################-->
+	<div class='remind-container' ng-if="c.options.allow_reminders === 'true'">
+  	<div class='row'>
+    	<div class='switch-part'>
+      	<div class="form-group" ng-show="c.timeSLots.length > 0">
+        	<div class="input-switch">
+          	<input ng-model="c.setReminder" type="checkbox">
+          	<label aria-hidden="true" class="switch" ng-click='c.setReminder = !c.setReminder' for="setReminder"></label>
+          	<label aria-hidden="true" class="switch-label" ng-click='c.setReminder = !c.setReminder'>Set Reminder</label>
+        	</div>
+      	</div>
+    	</div>
+    	<div class='time-selector'>
+      	<div class='fade' ng-class="{'in':c.setReminder===true}">
+        	<select class="form-control reminder-select" ng-options="time as time.label.display_value for time in c.data.reminderTimes" ng-model="c.selectedReminderTime"></select>
+        	<label aria-hidden="true" class="reminder-select-label"> prior.</label>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+	<button id='btnContinue' class="btn btn-primary btn-submit" ng-class="{'disabled':!c.selectedSlot}" ng-click="c.submitTimeSlot(c.selectedDate,c.selectedSlot.date_time)">Submit</button>
+
+	<div class="alert alert-div alert-success" ng-show="c.alertSuccess">
+  	<span class="close" ng-click="c.alertSuccess = false">x</span>
+  	<p>You are all set. See you on {{c.dateFormatted}} at {{c.timeFormatted}}.</p>
+	</div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

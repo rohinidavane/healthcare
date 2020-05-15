@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_user" label="Hcm Patient" max_length="40" name="x_457227_health_ca_hcm_patient" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Mobile No" max_length="40" name="u_integer_10" type="integer"/>
+        <element label="Weight" max_length="40" name="u_integer_5" type="integer"/>
+        <element label="Height" max_length="40" name="u_integer_6" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Relative's First Name" max_length="40" name="u_string_7" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Relative's Last Name" max_length="40" name="u_string_8" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Blood Group" max_length="40" name="u_string_9" type="string"/>
+    </element>
+</database>

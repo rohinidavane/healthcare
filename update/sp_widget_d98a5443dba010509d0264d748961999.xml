@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spUtil) {
+  /* widget controller */
+  var c = this;
+	c.illShow = false;
+	c.ansShow = false;
+	c.ageShow = false;
+	c.genderShow = false;
+	c.ltsymptomShow = false;
+	c.symptomShow = false;
+	c.temperatureShow = false;
+	c.breathingShow = false;
+
+	c.submitForm = function(){
+		if(!c.ill){
+			c.illShow = true;
+		}
+		if(!c.ans){
+			c.ansShow = true;
+		}
+		if(!c.age){
+			c.ageShow = true;
+		}
+		if(!c.gender){
+			c.genderShow = true;
+		}
+		if(!c.ltsymptom){
+			 c.ltsymptomShow = true;
+			 }
+	  if(!c.temperature){
+		 c.temperatureShow = true;
+		 }
+	  if(!c.breathing){
+		 c.breathingShow = true;
+		 }
+	  if(!c.symptom){
+			console.log('inside symptoms show if')
+		 c.symptomShow = true;
+		 }
+		if(c.ill && c.ans && c.age && c.gender && c.ltsymptom && c.temperature && c.breathing && c.symptom){
+			console.log('final')
+			
+		}
+		c.server.update().then(function(){
+        console.log('do')
+			spUtil.addInfoMessage(c.data.adv);
+			
+        }) 
+		
+		
+		 // spUtil.addInfoMessage("High Risk");
+		   // spUtil.addInfoMessage(c.data.adv);
+	}
+	
+	c.selectedIll = function(ill){ 
+		c.illShow = false;
+		c.data.illC = ill;
+		console.log(c.data.illC);
+		
+	}
+	c.selectAns = function(ans){ 
+		c.ansShow = false;
+		c.data.ansC = ans;
+		console.log(c.data.ansC)
+		
+	}
+	c.selectedAge = function(age){ 
+		c.ageShow = false;
+		c.data.ageC = age;
+		console.log(c.data.ageC);
+	}
+	c.selectedGender = function(gender){ 
+		c.genderShow = false;
+		c.data.genderC = gender;
+		console.log(c.data.genderC)
+	
+	}
+	c.selectedLTSymptom = function(ltsymptoms){ 
+		c.ltsymptomShow = false;
+		c.data.ltsymptomC = ltsymptoms;
+		console.log(c.data.ltsymptomC)
+	}
+	c.selectedSymptom = function(symptoms){
+		c.data.symptomC = symptoms;
+		c.symptomShow = false; 
+	  console.log(c.data.symptomC)
+	}
+	c.selectedTemperature = function(temperature){ 
+		c.temperatureShow = false;
+		c.data.temperatureC = temperature;
+		console.log(c.data.temperatureC)
+	
+	}
+	c.selectedBreathing = function(breathing){ 
+		c.breathingShow = false; 
+		c.data.breathingC = breathing
+		console.log(c.data.breathingC)
+	}
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.answer{
+  width:200px;
+}
+
+.question{
+ font-size:18px; 
+}
+
+.errorMessage{
+ color:red;
+  font-size:12px;
+  padding-left:15px;
+}
+
+.button{
+  width:150px;
+}
+
+select{
+  height:25px;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>CovidChecker2</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+ data.ills = ["Yes","No"]
+ data.answering = ["MySelf","Someone Else"]
+ data.ages = ["1-4","5-9","10-18","19-39","40-50","50-60","60-80","80+"]	
+ data.genders = ["Male","Female","Other"]
+ data.lifeThreatningSymptoms = ["No","Giddyness","seizers","Weakness"]
+ data.temperatures = ["96-98","98-99","99-100","100-101","101+"]
+ data.breathingCondition = ["Server - Gasping for air","Mild- Ucan get air but ur lungs are tight","No trouble in breathing"]
+ data.symptoms = ["Coughing up blood","Sighns of blood pressure","None of the above "]
+
+ if(input && input.illC && input.ansC && input.ageC && input.genderC && input.ltsymptomC && input.symptomC && input.temperatureC && input.breathingC){
+	 
+    giveAdvice();
+		 
+ }
+	 
+	 function giveAdvice(){
+			 
+	var adv=" ";
+		 
+	 if(input.temperatureC == "101+" &&  input.ageC == "80+")
+		 {
+			 console.log("High risk");
+			data.adv="U are at High Risk, Please consult your doctor!";
+			  
+			//data.adv=adv;
+		 } 
+	 
+ }	
+})();
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-07 13:18:58</sys_created_on>
+        <sys_id>d98a5443dba010509d0264d748961999</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>CovidChecker2</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_widget_d98a5443dba010509d0264d748961999</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-11 07:29:17</sys_updated_on>
+        <template><![CDATA[<div>
+<div class="panel panel-default">
+    <div class="panel-body">
+      
+      <div>
+      <p class="question">Are you not feeling well or caring for someone who is ill?</p>
+      <select class="answer"  ng-model="c.ill" ng-options=" x for x in data.ills" ng-change= "c.selectedIll(c.ill)"></select>
+      <p class="errorMessage" ng-show="c.illShow">Required Field</p>
+      </div>
+      <br>
+      <div>
+      <p class="question">Are you answering for yourself or someone else?</p>
+      <select class="answer" ng-model="c.ans" ng-options=" x for x in data.answering" ng-change= "c.selectAns(c.ans)"></select>
+      <p class="errorMessage" ng-show="c.ansShow">Required Field</p>
+      </div>
+      <br>
+      <div>
+      <p class="question">Select Age Group</p>
+      <select class="answer" ng-model="c.age" ng-options=" x for x in data.ages" ng-change= "c.selectedAge(c.age)"></select>
+      <p class="errorMessage" ng-show="c.ageShow">Required Field</p>
+      </div>
+      <br>
+      <div>
+      <p class="question">Select Gender</p>
+      <select class="answer" ng-model="c.gender" ng-options=" x for x in data.genders" ng-change= "c.selectedGender(c.gender)"></select>
+      <p class="errorMessage" ng-show="c.genderShow">Required Field</p>
+      </div>
+      <br>
+      <div>
+      <p class="question">Do you have any of the following life threatning symptoms?</p>
+      <select class="answer" ng-model="c.ltsymptom" ng-options=" x for x in data.lifeThreatningSymptoms" ng-change= "c.selectedLTSymptom(c.ltsymptom)"></select>
+      <p class="errorMessage" ng-show="c.ltsymptomShow">Required Field</p>
+      </div>
+      <br>
+      <div>
+      <p class="question">Do you have any symptoms?</p>
+      <select class="answer" ng-model="c.symptom" ng-options=" x for x in data.symptoms" ng-change= "c.selectedSymptom(c.symptom)"></select>
+      <p class="errorMessage" ng-show="c.symptomShow">Required Field</p>
+      </div>
+      <br>
+      <div>
+      <p class="question">Select Body Temperature</p>
+      <select class="answer" ng-model="c.temperature" ng-options=" x for x in data.temperatures" ng-change= "c.selectedTemperature(c.temperature)"></select>
+      <p class="errorMessage" ng-show="c.temperatureShow">Required Field</p>
+      </div>
+      <br>
+      <div>
+      <p class="question">Select Your Breathing Condition</p>
+      <select class="answer" ng-model="c.breathing" ng-options=" x for x in data.breathingCondition" ng-change= "c.selectedBreathing(c.breathing)"></select>
+      <p class="errorMessage" ng-show="c.breathingShow">Required Field</p>
+      </div>
+      <br>
+      <button type="button"  class="btn btn-success" ng-click="c.submitForm()">Submit</button>  
+     
+  </div>
+   </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

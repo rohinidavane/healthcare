@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_instance_uc_can_view">
+    <m2m_sp_instance_uc_can_view action="INSERT_OR_UPDATE">
+        <sp_instance display_value="All Appointments">9d9a712fdb6c90509d0264d74896194d</sp_instance>
+        <sys_class_name>m2m_sp_instance_uc_can_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-09 09:42:22</sys_created_on>
+        <sys_id>b43cf1afdb6c90509d0264d7489619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All Appointments.HCM admin</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>m2m_sp_instance_uc_can_view_b43cf1afdb6c90509d0264d7489619a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-09 09:42:22</sys_updated_on>
+        <user_criteria display_value="HCM admin">bc5679a7db6c90509d0264d748961934</user_criteria>
+    </m2m_sp_instance_uc_can_view>
+</record_update>

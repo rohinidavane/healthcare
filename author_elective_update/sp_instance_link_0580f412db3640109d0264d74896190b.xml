@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>empty</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">2a50b812db3640109d0264d748961964</sp_column>
+        <sp_page display_value="patient_registration">01be009edb7240109d0264d748961998</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-08 07:09:26</sys_created_on>
+        <sys_id>0580f412db3640109d0264d74896190b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Patient Registration</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sp_instance_link_0580f412db3640109d0264d74896190b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 05:16:30</sys_updated_on>
+        <title>Patient Registration</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": "-- None --"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=0580f412db3640109d0264d74896190b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</application>
+        <file_path/>
+        <instance_id>54ac7d37dbdfb74091232f17d49619e5</instance_id>
+        <instance_name>dev92326</instance_name>
+        <name>sp_instance_link_0580f412db3640109d0264d74896190b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;empty&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;2a50b812db3640109d0264d748961964&lt;/sp_column&gt;&lt;sp_page display_value="patient_registration"&gt;01be009edb7240109d0264d748961998&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-02-08 07:09:26&lt;/sys_created_on&gt;&lt;sys_id&gt;0580f412db3640109d0264d74896190b&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name&gt;Patient Registration&lt;/sys_name&gt;&lt;sys_package display_value="Health Care Management" source="x_457227_health_ca"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Health Care Management"&gt;2febbf8edb3240109d0264d74896194e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_0580f412db3640109d0264d74896190b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-05-08 05:16:30&lt;/sys_updated_on&gt;&lt;title&gt;Patient Registration&lt;/title&gt;&lt;type&gt;page&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": "-- None --"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=0580f412db3640109d0264d74896190b"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1268753134</payload_hash>
+        <record_name>Patient Registration</record_name>
+        <reverted_from/>
+        <source>67ebbf8edb3240109d0264d748961951</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 05:16:30</sys_created_on>
+        <sys_id>acc5bbc7db6050509d0264d748961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171f2b6ae390000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 05:16:30</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>28c5bbc7fb60505010e686c8c9c3df65</update_guid>
+        <update_guid_history>28c5bbc7fb60505010e686c8c9c3df65:1268753134,71a5f787ef605050414567a61a0f66ba:1195467312,31253f07ea60505087f1205e553e4c9c:-1479773332,dbb547fabae8dc10d5a1581f66dd9fd8:1268753134,439547fa04e8dc10116585497549f8d5:1195467312,8fa44bbae2e8dc100f5cbe00a934c2bf:-1675569988,e4948bba1ee8dc100526001578c2d7ad:-1479773332,3bb2925ed3e05c10239b370559996277:-956364981,9e52165ef5e05c109010592734270e15:1899564233,0b22161ebbe05c10ad1d8456c1461c46:1549071146,d2d0b0527a3640105165fb51e2d9b297:-956364981,5980f4128c36401001726c1de588ba0c:876899479</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Patient Registration">427e1013db6450509d0264d7489619ea</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-08 08:14:23</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>18eab6cc515447d5911ac8ab402ef011</sys_id>
+        <sys_metadata>0580f412db3640109d0264d74896190b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Patient Registration</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_scope_delete display_value="">0a2e165ea9814e3783fc3633cab491d1</sys_scope_delete>
+        <sys_update_name>sp_instance_link_0580f412db3640109d0264d74896190b</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_0580f412db3640109d0264d74896190b">acc5bbc7db6050509d0264d748961965</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-08 08:14:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

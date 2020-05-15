@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_457227_health_ca.GetDoctors</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetDoctors</name>
+        <script><![CDATA[var GetDoctors = Class.create();
+GetDoctors.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getDoctors:function(){
+        var collection = [];
+		gs.info('*****'+this.getParameter('sysparm_userId'));
+
+		var gr = new GlideRecord('x_457227_health_ca_hcm_staff');
+			gr.addQuery('u_speciality',this.getParameter('sysparm_userId'));
+			gr.query();
+			while(gr.next()){
+				var obj = {};
+                    obj.id = gr.sys_id+'';
+                    obj.name = gr.first_name+' ' +gr.last_name;                 
+                    collection.push(obj);                 
+		}
+        return JSON.stringify(collection);
+    },
+	
+    type: 'GetDoctors'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-27 11:25:28</sys_created_on>
+        <sys_id>2ebc1473db9850109d0264d74896193c</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>GetDoctors</sys_name>
+        <sys_package display_value="Health Care Management" source="x_457227_health_ca">2febbf8edb3240109d0264d74896194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Health Care Management">2febbf8edb3240109d0264d74896194e</sys_scope>
+        <sys_update_name>sys_script_include_2ebc1473db9850109d0264d74896193c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-27 12:47:52</sys_updated_on>
+    </sys_script_include>
+</record_update>

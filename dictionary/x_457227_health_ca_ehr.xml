@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Ehr" max_length="40" name="x_457227_health_ca_ehr" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="AppointmentTime" max_length="40" name="appointmenttime" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="200" name="comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Diagnosis" max_length="200" name="diagnosis" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="MRNumber" max_length="40" name="mrnumber" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Patient Name" max_length="40" name="name" type="string"/>
+        <element label="Reports" max_length="40" name="reports" type="file_attachment"/>
+        <element attributes="edge_encryption_enabled=true" label="Treatment Given" max_length="1000" name="treatment_given" type="string"/>
+    </element>
+</database>
